@@ -1,0 +1,36 @@
+GET http://localhost:3000/agente
+
+### Criar novo agente
+POST http://localhost:3000/agente
+Content-Type: application/json
+
+{
+  "name": "Agente D"
+}
+
+### Obter agente único
+GET http://localhost:3000/agente/3
+
+### Alterar o nome de um agente
+PUT http://localhost:3000/agente/3
+Content-Type: application/json
+
+{
+  "name": "Agente Cê"
+}
+
+### Criar vários agentes
+POST http://localhost:3000/agente/bulk
+Content-Type: application/json
+
+{
+  "bulk" : [
+      { "name": "Empresa Consumidor Ltda" },
+      { "name": "Empresa Filial 1" },
+      { "name": "Empresa Filial 2" }
+  ]  
+}
+
+
+### Deletar
+DELETE http://localhost:3000/agente/3
